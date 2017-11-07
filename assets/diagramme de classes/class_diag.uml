@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-39.0" y="-62.0">imgedit.utils.Observer</node>
+    <node x="-17.0" y="-143.0">imgedit.utils.Observable</node>
+    <node x="-211.0" y="-143.0">imgedit.filters.AbstractFilter</node>
+    <node x="-62.0" y="19.0">imgedit.Main</node>
+    <node x="-211.0" y="19.0">imgedit.mvc.model.Model</node>
+    <node x="-211.0" y="100.0">imgedit.mvc.view.View</node>
+    <node x="-211.0" y="-224.0">imgedit.utils.CustomScheduledThreadPoolExecutor</node>
+    <node x="-211.0" y="-62.0">imgedit.mvc.controller.Controller</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+  <SelectedNodes>
+    <node>imgedit.Main</node>
+    <node>imgedit.mvc.model.Model</node>
+    <node>imgedit.utils.Observer</node>
+    <node>imgedit.utils.Observable</node>
+    <node>imgedit.mvc.view.View</node>
+    <node>imgedit.filters.AbstractFilter</node>
+    <node>imgedit.utils.CustomScheduledThreadPoolExecutor</node>
+    <node>imgedit.mvc.controller.Controller</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
