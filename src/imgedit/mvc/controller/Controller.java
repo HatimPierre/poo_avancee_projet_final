@@ -14,18 +14,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.util.Enumeration;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
 
 public class Controller implements ActionListener{
 
     private Model m;
     private View v;
     private File currentDirectory;
-    private static String[] baFil = new String[]{"All Green", "Very Long", "Invert", "Binary", "Grayscale",
+    private static String[] baFil = new String[]{"All Green", "Invert", "Binary", "Grayscale",
             "Rotate Left", "Rotate Right", "Horizontal Flip", "Vertical Flip"};
-    private static String[] boFil = new String[]{"Posterize", "Glass", "Solarize", "Contours", "Resize"};
+    private static String[] advFil = new String[]{"Posterize", "Glass", "Solarize", "Contours", "Resize"};
 
     public Controller(){
         currentDirectory = null;
@@ -45,7 +42,7 @@ public class Controller implements ActionListener{
         for(String test : baFil)
             isFilter = isFilter || test.equals(command);
 
-        for(String test : boFil)
+        for(String test : advFil)
             isFilter = isFilter || test.equals(command);
 
         if (command.equals("Open")){
@@ -237,44 +234,44 @@ public class Controller implements ActionListener{
     }
     public Class loadFilter(String name){
         boolean isBasic = false;
-        boolean isBonus = false;
+        boolean isAdvanced = false;
         Class filterClass = null;
-        JarFile jf;
-        String jfPath = null;
-        String pckg = null;
+        File f;
+        String basePath = null;
+        String fullclasspath = null;
 
         for(String test : baFil)
             isBasic = isBasic || test.equals(name);
 
-        for(String test : boFil)
-            isBonus = isBonus || test.equals(name);
+        for(String test : advFil)
+            isAdvanced = isAdvanced || test.equals(name);
 
-        try {
-            if(isBasic) {
-                jfPath = "plugin/BasicPlugin.jar";
-                pckg = "plugin.basic.";
-            }else if(isBonus) {
-                jfPath = "plugin/BonusPlugin.jar";
-                pckg = "plugin.advanced.";
-            }else
-                System.out.println("Fail Filtre");
-            System.out.flush();
-            jf = new JarFile(jfPath);
+        if(isBasic) {
+            basePath = "src/imgedit/filters/basic";
+            fullclasspath = "imgedit.filters.basic.";
+        }else if(isAdvanced) {
+            basePath = "src/imgedit/filters/advanced";
+            fullclasspath = "imgedit.filters.advanced.";
+        }else {
+            System.out.println("Fail Filtre");
+            return null;
+        }
+        System.out.flush();
 
-            Enumeration e = jf.entries();
+        f = new File(basePath);
 
-            URL[] urls = { new URL("jar:file:" + jfPath + "!/") };
-            URLClassLoader cl = URLClassLoader.newInstance(urls);
+        name = name.replace(" ", "");
+        fullclasspath += name;
 
-            while (e.hasMoreElements()) {
-                JarEntry je = (JarEntry) e.nextElement();
-                if(je.isDirectory() || !je.getName().endsWith((name = name.replace(" ", "")) + ".class"))
-                    continue;
-                filterClass = cl.loadClass(pckg+name);
-            }
-        } catch (IOException | ClassNotFoundException e) {
+        try{
+            URL url = f.toURI().toURL();
+            URL[] urls= new URL[]{url};
+            ClassLoader cl = new URLClassLoader(urls);
+            filterClass = cl.loadClass(fullclasspath);
+        } catch (Exception e){
             e.printStackTrace();
         }
+
         return filterClass;
     }
 

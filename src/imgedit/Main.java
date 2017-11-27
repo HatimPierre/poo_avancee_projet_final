@@ -17,7 +17,7 @@ public class Main {
         JFXPanel workaround = new JFXPanel();
         Controller ctrl = new Controller();
         View my_app_main_window = new View(ctrl);
-        Model model = new Model();
+        Model model = new Model(my_app_main_window);
         ctrl.setModelAndView(model, my_app_main_window);
     }
 }

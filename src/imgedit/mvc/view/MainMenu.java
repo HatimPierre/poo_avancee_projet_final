@@ -44,15 +44,27 @@ class MainMenu {
 
         JMenu filters = new JMenu("Filters");
 
+
+
         JMenu basicFi = new JMenu("Basic");
         JMenu advFi = new JMenu("Advanced");
 
         filters.add(basicFi);
         filters.add(advFi);
 
-        basicFi.add("All basic filters");
+        basicFi.add("All Green"); //  Test filter to see if code works
+        basicFi.add("Invert");
+        basicFi.add("Binary");
+        basicFi.add("Grayscale");
+        basicFi.add("Rotate Left");
+        basicFi.add("Rotate Right");
+        basicFi.add("Vertical Flip");
+        basicFi.add("Horizontal Flip");
 
-        advFi.add("All advanced filters");
+        advFi.add("Posterize");
+        advFi.add("Glass");
+        advFi.add("Solarize");
+        advFi.add("Contours");
 
         for (int i = 0; i < basicFi.getItemCount(); i++)
             basicFi.getItem(i).addActionListener(al);
