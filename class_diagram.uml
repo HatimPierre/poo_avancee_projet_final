@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>imgedit</OriginalElement>
+  <nodes>
+    <node x="759.0" y="1551.0">imgedit.mvc.model.FilterLauncher</node>
+    <node x="3202.0" y="299.5">imgedit.filters.basic.HorizontalFlip</node>
+    <node x="928.0" y="1259.0">imgedit.mvc.model.History.FastImagePanel</node>
+    <node x="988.0" y="272.0">imgedit.filters.advanced.Solarize</node>
+    <node x="559.25" y="14.0">imgedit.filters.Sliding</node>
+    <node x="1015.0" y="1551.0">imgedit.mvc.view.MainMenu</node>
+    <node x="1852.0" y="1551.0">imgedit.Main</node>
+    <node x="3940.0" y="299.5">imgedit.filters.advanced.Posterize</node>
+    <node x="2095.0" y="299.5">imgedit.filters.basic.Invert</node>
+    <node x="176.0" y="191.0">imgedit.filters.advanced.Contours</node>
+    <node x="442.0" y="1096.0">imgedit.mvc.model.Model</node>
+    <node x="883.0" y="820.0">imgedit.mvc.model.History</node>
+    <node x="2464.0" y="299.5">imgedit.filters.basic.RotateLeft</node>
+    <node x="3571.0" y="299.5">imgedit.filters.basic.RotateRight</node>
+    <node x="0.0" y="273.0">imgedit.filters.Jobable.Bounds</node>
+    <node x="1460.0" y="1551.0">imgedit.utils.CustomScheduledThreadPoolExecutor</node>
+    <node x="0.0" y="820.0">imgedit.mvc.model.Tab</node>
+    <node x="1726.0" y="299.5">imgedit.filters.advanced.Resize</node>
+    <node x="277.5" y="549.0">imgedit.filters.advanced.Contours.Countouring</node>
+    <node x="4309.0" y="299.5">imgedit.filters.basic.AllGreen</node>
+    <node x="619.0" y="272.0">imgedit.filters.advanced.Glass</node>
+    <node x="1357.0" y="299.5">imgedit.filters.basic.Binary</node>
+    <node x="1430.5" y="820.0">imgedit.utils.Observer</node>
+    <node x="473.5" y="820.0">imgedit.utils.Observable</node>
+    <node x="0.0" y="1551.0">imgedit.mvc.view.ImagePanel</node>
+    <node x="2464.0" y="0.0">imgedit.filters.AbstractFilter</node>
+    <node x="2833.0" y="299.5">imgedit.filters.basic.VerticalFlip</node>
+    <node x="4678.0" y="299.5">imgedit.filters.basic.Grayscale</node>
+    <node x="59.25" y="0.5">imgedit.filters.Jobable</node>
+    <node x="1268.0" y="933.0">imgedit.mvc.view.View</node>
+    <node x="385.0" y="1551.0">imgedit.mvc.controller.Controller</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="imgedit.filters.advanced.Glass" target="imgedit.filters.Sliding">
+      <point x="-87.25" y="-73.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="imgedit.filters.basic.Invert" target="imgedit.filters.AbstractFilter">
+      <point x="0.0" y="-45.5" />
+      <point x="2269.5" y="171.0" />
+      <point x="2611.653846153846" y="171.0" />
+      <point x="-26.84615384615381" y="45.5" />
+    </edge>
+    <edge source="imgedit.filters.advanced.Posterize" target="imgedit.filters.AbstractFilter">
+      <point x="0.0" y="-45.5" />
+      <point x="4114.5" y="141.0" />
+      <point x="2745.8846153846152" y="141.0" />
+      <point x="107.38461538461524" y="45.5" />
+    </edge>
+    <edge source="imgedit.filters.basic.Binary" target="imgedit.filters.AbstractFilter">
+      <point x="0.0" y="-45.5" />
+      <point x="1531.5" y="151.0" />
+      <point x="2557.9615384615386" y="151.0" />
+      <point x="-80.53846153846143" y="45.5" />
+    </edge>
+    <edge source="imgedit.filters.advanced.Contours" target="imgedit.filters.AbstractFilter">
+      <point x="141.0" y="-154.0" />
+      <point x="528.5" y="121.0" />
+      <point x="2477.423076923077" y="121.0" />
+      <point x="-161.07692307692287" y="45.5" />
+    </edge>
+    <edge source="imgedit.filters.advanced.Contours.Countouring" target="imgedit.filters.advanced.Contours">
+      <point x="0.0" y="-113.0" />
+      <point x="0.0" y="154.0" />
+    </edge>
+    <edge source="imgedit.filters.advanced.Solarize" target="imgedit.filters.AbstractFilter">
+      <point x="87.25" y="-73.0" />
+      <point x="1249.75" y="141.0" />
+      <point x="2531.1153846153848" y="141.0" />
+      <point x="-107.38461538461524" y="45.5" />
+    </edge>
+    <edge source="imgedit.filters.advanced.Contours" target="imgedit.filters.Sliding">
+      <point x="0.0" y="-154.0" />
+      <point x="387.5" y="111.0" />
+      <point x="608.25" y="111.0" />
+      <point x="-98.0" y="31.5" />
+    </edge>
+    <edge source="imgedit.filters.advanced.Glass" target="imgedit.filters.AbstractFilter">
+      <point x="87.25" y="-73.0" />
+      <point x="880.75" y="131.0" />
+      <point x="2504.269230769231" y="131.0" />
+      <point x="-134.23076923076906" y="45.5" />
+    </edge>
+    <edge source="imgedit.filters.Jobable.Bounds" target="imgedit.filters.Jobable">
+      <point x="0.0" y="-72.0" />
+      <point x="78.0" y="171.0" />
+      <point x="110.75" y="171.0" />
+      <point x="-51.5" y="45.0" />
+    </edge>
+    <edge source="imgedit.filters.basic.VerticalFlip" target="imgedit.filters.AbstractFilter">
+      <point x="0.0" y="-45.5" />
+      <point x="3007.5" y="171.0" />
+      <point x="2665.346153846154" y="171.0" />
+      <point x="26.84615384615381" y="45.5" />
+    </edge>
+    <edge source="imgedit.filters.basic.RotateRight" target="imgedit.filters.AbstractFilter">
+      <point x="0.0" y="-45.5" />
+      <point x="3745.5" y="151.0" />
+      <point x="2719.0384615384614" y="151.0" />
+      <point x="80.53846153846143" y="45.5" />
+    </edge>
+    <edge source="imgedit.mvc.model.Model" target="imgedit.utils.Observable">
+      <point x="0.0" y="-167.5" />
+      <point x="0.0" y="113.0" />
+    </edge>
+    <edge source="imgedit.filters.basic.Grayscale" target="imgedit.filters.AbstractFilter">
+      <point x="0.0" y="-45.5" />
+      <point x="4852.5" y="121.0" />
+      <point x="2799.576923076923" y="121.0" />
+      <point x="161.07692307692287" y="45.5" />
+    </edge>
+    <edge source="imgedit.mvc.view.View" target="imgedit.utils.Observer">
+      <point x="0.0" y="-221.5" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="imgedit.filters.advanced.Contours" target="imgedit.filters.Jobable">
+      <point x="-141.0" y="-154.0" />
+      <point x="246.5" y="171.0" />
+      <point x="213.75" y="171.0" />
+      <point x="51.5" y="45.0" />
+    </edge>
+    <edge source="imgedit.mvc.model.History.FastImagePanel" target="imgedit.mvc.model.History">
+      <point x="0.0" y="-86.0" />
+      <point x="0.0" y="194.5" />
+    </edge>
+    <edge source="imgedit.filters.advanced.Solarize" target="imgedit.filters.Sliding">
+      <point x="-87.25" y="-73.0" />
+      <point x="1075.25" y="111.0" />
+      <point x="804.25" y="111.0" />
+      <point x="98.0" y="31.5" />
+    </edge>
+    <edge source="imgedit.filters.advanced.Resize" target="imgedit.filters.AbstractFilter">
+      <point x="0.0" y="-45.5" />
+      <point x="1900.5" y="161.0" />
+      <point x="2584.8076923076924" y="161.0" />
+      <point x="-53.69230769230762" y="45.5" />
+    </edge>
+    <edge source="imgedit.filters.basic.RotateLeft" target="imgedit.filters.AbstractFilter">
+      <point x="0.0" y="-45.5" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="imgedit.filters.basic.HorizontalFlip" target="imgedit.filters.AbstractFilter">
+      <point x="0.0" y="-45.5" />
+      <point x="3376.5" y="161.0" />
+      <point x="2692.1923076923076" y="161.0" />
+      <point x="53.69230769230762" y="45.5" />
+    </edge>
+    <edge source="imgedit.filters.basic.AllGreen" target="imgedit.filters.AbstractFilter">
+      <point x="0.0" y="-45.5" />
+      <point x="4483.5" y="131.0" />
+      <point x="2772.730769230769" y="131.0" />
+      <point x="134.23076923076906" y="45.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.28194967307311275" x="2513.5" y="929.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
