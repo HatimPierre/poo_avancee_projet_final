@@ -215,7 +215,7 @@ public class Controller implements ActionListener{
             JTextArea myTArea = new JTextArea(40,80);
             myTArea.setEditable(false);
             try {
-                FileReader fr = new FileReader("asset/Help.txt");
+                FileReader fr = new FileReader("assets/Help.txt");
                 myTArea.read(fr, "The manual");
                 fr.close();
             } catch (IOException e) {

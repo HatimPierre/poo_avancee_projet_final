@@ -1,0 +1,50 @@
+Welcome to the help page
+
+   I - Keyboard shortcuts
+  II - General usage
+
+	I - Keyboard shortcuts
+
+  	 To simplify repetitive task and improve workflow, shortcuts have been
+implemented in this software. Please notice that this list
+is subject to evolutions.
+
+	CTRL-E      Allows you to Export an image with popular file formats
+	CTRL-H      Displays this manual
+	CTRL-I      Allows you to import an image into the current project
+	CTRL-N      Open a new default project named "Default"
+	CTRL-S      Saves the current project in it's former location if applicable
+	CTRL-R      Allows you to rename the project
+	CTRL-O      Allows you to access the software's options
+	CTRL-W      Closes the current project
+	CTRL-ALT-R  Allows you to resize the image held by the current panel
+	ALT-R       Redos previous actions until there is no more to process
+	ALT-U       Undos previous actions until there is no more to process
+	ALT-O       Allows you to open an already existing project
+	ESCAPE      Exits the program as if close button has been pressed
+
+
+
+	II - General use
+
+In this image processing software, you might use the following features:
+
+		(i) Filters: Filters are algorithm that you can apply to an
+image to modify it's look. Some of them are parametrized (when relevant)
+and most of them take advantage of multithreading to decrease processing cost
+and improve time-efficiency
+
+		(ii) Tools: A set of tools is left at your disposal 
+to either resize or paint over the image to make it more suitable to your needs.
+This could be upgraded with the next versions of the software to give you
+more control over your work.
+
+		(iii) Miscellaneous:
+			a - Job size: You can set this value in the Option panel.
+It is used to determine a job's size during multithreading processing of a 
+filer computation. A job is a set of pixel of width and height equal to "size".
+Each job is submitted to a thread so that the image wil be faster computed taking
+advantage of all system resources.
+
+Contact information: hatim-pierre.fazileabasse1@uqac.ca
+	

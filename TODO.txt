@@ -1,0 +1,4 @@
+1 - Fix main result display with some color profiles
+2 - Constrain resize to the original's image proportion with a toggle button
+3 - Add paint tools and the like
+4 - Implement a cancel functionality for async filters
